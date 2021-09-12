@@ -19,6 +19,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.16.1
+      - name: Install dependencies 📥
+        run: npm install
+      - name: Lint ✏️
+        run: npm run lint
+      - name: Build 🔧
+        run: npm run build
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.16.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16.1
       - name: Check GitHub Pages Status 👀
         uses: crazy-max/ghaction-github-status@v1
         with:
@@ -28,7 +39,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: src/
+          build_dir: dist/
           fqdn: cubefield.austen.info
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
