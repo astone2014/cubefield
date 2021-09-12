@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "serve": "webpack-dev-server --hot",
-    "build": "webpack",
+    "build": "webpack --config ./webpack.config.prod.js",
     "lint": "echo \"Error: no linting specified\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
