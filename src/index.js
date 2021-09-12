@@ -100,19 +100,19 @@ document.addEventListener("keydown", (e) => {
     switch (e.key) {
         case 'w':
         case 'ArrowUp':
-            player.position.x += 1;
+            player.position.x -= 1;
             break;
         case 'ArrowLeft':
         case 'a':
-            player.position.z += 1;
+            player.position.z -= 1;
             break;
         case 's':
         case 'ArrowDown':
-            player.position.x -= 1;
+            player.position.x += 1;
             break;
         case 'ArrowRight':
         case 'd':
-            player.position.z -= 1;
+            player.position.z += 1;
             break; d
     }
 }, false);
